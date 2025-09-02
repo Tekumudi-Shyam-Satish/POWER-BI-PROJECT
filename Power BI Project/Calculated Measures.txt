@@ -1,0 +1,17 @@
+Calculated Measures 
+
+1. Average Revenue = AVERAGE([Revenue (Millions)])
+
+2. Highest Movie Revenue = MAX([Revenue (Millions)])
+
+3. Total Genres = COUNT('IMDB-Movie-Data'[Genre])
+
+4. Total Movies = DISTINCTCOUNT([Title])
+
+5. Total Votes = SUM([Votes])
+
+6. Unique Actors = DISTINCTCOUNT([Actors])
+
+New Column Added :
+
+-- > Table.AddColumn(#"Added Index1", "Bucket", each if [Index] <= 10 then "Top 10" else "Others")
